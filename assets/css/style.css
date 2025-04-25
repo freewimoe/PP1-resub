@@ -88,13 +88,27 @@ a:hover {
   text-align: center;
 }
 .responsive-img-link {
-  width: 30%;
+  width: 80%;
+  max-width: 60%;
   height: auto;
-  min-width: 150px;
-  max-width: 300px;
-  min-height: 100px;
-  max-height: 200px;
-  object-fit: contain;
+  max-height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border-radius: 4px;
+  display: block;
+  margin-top: 10px;
+}
+
+/* Zoom beim Hover */
+.link-box:hover .responsive-img-link {
+  transform: scale(1.6);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Speziell größere Bilddarstellung für Britannica & Study */
+.large-img {
+  max-width: 90%;
+  max-height: 300px;
 }
 
 @media (max-width: 768px) {
@@ -126,29 +140,45 @@ a:hover {
   font-size: 1.2em;
   background-color: #dcdcdc;
 }
+/*responsive design for smaller screens*/
 .link-container {
   display: flex;
-  flex-wrap: column;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
   padding: 20px;
 }
+
 .link-box {
-  flex: 1 1 calc(33.333% - 40px);
+  flex: 1 1 300px;
+  max-width: 320px;
   background-color: #f0f0f0;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
   border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
+.link-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
 .link-box h3 {
   margin-top: 0;
+  color: darkslateblue;
 }
+
 .link-box a {
   color: #007bff;
   text-decoration: none;
 }
+
 .link-box a:hover {
   text-decoration: underline;
 }
+
 #work-link {
   color: darkblue;
   text-decoration: none;
