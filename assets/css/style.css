@@ -1,3 +1,68 @@
+
+.hero-image {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 60vh;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.hero-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: darkslateblue;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.teaser-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px 20px;
+}
+
+.teaser-box {
+  flex: 1 1 250px;
+  max-width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.05);
+  border-radius: 6px;
+  text-align: center;
+}
+
+.teaser-box a {
+  display: block;
+  margin-top: 10px;
+  color: darkblue;
+  text-decoration: none;
+}
+
+.teaser-box a:hover {
+  text-decoration: underline;
+}
+
+
 body {
   font-family: Garamond, serif;
   padding-bottom: 60px;

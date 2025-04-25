@@ -2,70 +2,173 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Henry Purcell</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Henry Purcell</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Garamond, serif;
+      background-color: #fff;
+      color: #000;
+    }
+
+    /* === Hero Section === */
+    .hero-image {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: url('https://assets.codepen.io/11590227/Henry_Purcell.png') no-repeat center center/cover;
+      background-attachment: fixed;
+      overflow: hidden;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 30px;
+      border-radius: 8px;
+      max-width: 90%;
+      color: white;
+    }
+
+    .hero-overlay h1 {
+      font-size: 2.8em;
+      margin-bottom: 0.3em;
+    }
+
+    .hero-overlay h2 {
+      font-size: 1.6em;
+      font-weight: normal;
+      margin-bottom: 0.3em;
+    }
+
+    .hero-overlay p {
+      font-size: 1.2em;
+      margin-bottom: 1.2em;
+    }
+
+    .hero-button {
+      padding: 10px 20px;
+      background-color: darkslateblue;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+    }
+
+    .hero-button:hover {
+      background-color: slateblue;
+    }
+
+    /* === Teaser Section === */
+    .teaser-wrapper {
+      padding: 60px 20px;
+      background-color: #fafafa;
+    }
+
+    .teaser-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .teaser-box {
+      flex: 1 1 250px;
+      max-width: 300px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+      box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      border-radius: 6px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .teaser-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .teaser-box h3 {
+      margin-top: 0;
+      font-size: 1.3em;
+      color: darkslateblue;
+    }
+
+    .teaser-box p {
+      margin: 10px 0 15px;
+      font-size: 1em;
+    }
+
+    .teaser-box a {
+      color: darkblue;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .teaser-box a:hover {
+      text-decoration: underline;
+      color: steelblue;
+    }
+
+    @media (max-width: 768px) {
+      .hero-overlay h1 {
+        font-size: 2.2em;
+      }
+
+      .hero-overlay h2 {
+        font-size: 1.2em;
+      }
+
+      .teaser-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 
-<body id="top">
-    <nav>
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="menu-icon">&#9776;</label>
-        <ul id="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="life.html">Life of Henry Purcell</a></li>
-            <li><a href="work.html">His Works</a></li>
-            <li><a href="legacy.html">Legacy</a></li>
-            <li><a href="links.html">Links</a></li>
-        </ul>
-    </nav>
-    <h1 class="center-text">Henry Purcell - England's first Opera Composer </h1>
-    <h2 class="center-text">a project of the 'Purcell Society Karlsruhe'</h2>
-    <h3 class="center-text"> </h3>
-    <div class="center-text container"><img src="assets/images/Henry_Purcell.png"
-            alt="Portrait of Henry Purcell in 1695, portrait by (or after studio of), John Closterman, oil on canvas, (1695)."
-            class="responsive-img"></div>
-    <p><span class="highlight">Henry Purcell (c. 1659 – November 21, 1695) </span>was a remarkable English composer
-        whose contributions to Baroque music have left an indelible mark on the world of classical music. The Purcell
-        Society Karlsruhe is dedicated to his life and work and will serve to honor and preserve the legacy
-        of one of England’s most influential composers. <br>
-
-        <span class="highlight"> Purcell’s early life </span> was steeped in music, as he was a chorister at the Chapel
-        Royal and later became the organist at Westminster Abbey. His compositions spanned various genres, including
-        sacred music, secular songs, and operas. Notable works such as the opera “Dido and Aeneas” and the semi-opera
-        “The Fairy Queen” showcase his innovative use of harmony and expressive melodies.<br>
-
-        <span class="highlight">Throughout his career</span>, Purcell composed music for royal occasions, the church,
-        and the theater, reflecting the political and social changes of his time. His ability to blend English musical
-        traditions with influences from Italian and French styles made his work unique and enduring.<br>
-
-        Our association<span class="highlight"> dedicated to Henry Purcell</span> will not only celebrate his musical
-        achievements but also provide a platform for education and appreciation of Baroque music. It would ensure that
-        future generations continue to explore and enjoy the rich heritage of Purcell’s compositions.</p>
-        <footer class="smart-footer">
-            <input type="checkbox" id="footer-toggle" class="footer-toggle" hidden>
-            <label for="footer-toggle" class="footer-bar">
-              Purcell Society Karlsruhe – Info & Contact <span class="arrow">▼</span>
-            </label>
-            <div class="footer-panel">
-              <div class="footer-columns">
-                <div class="footer-box">
-                  <h4>About us</h4>
-                  <p>'Purcell Society Karlsruhe' was founded in 2018. We research the life and works of Henry Purcell.</p>
-                </div>
-                <div class="footer-box">
-                  <h4>Services</h4>
-                  <p>Conferences and concerts with artists from the region.</p>
-                </div>
-                <div class="footer-box">
-                  <h4>Contact</h4>
-                  <p>Email: <a href="mailto:purcell.society.karlsruhe@gmail.com">purcell.society.karlsruhe@gmail.com</a></p>
-                </div>
-              </div>
-            </div>
-          </footer>
-          
-</body>
-
-</html>
+<body>
+<header class="hero-image">
+    <img src="https://assets.codepen.io/11590227/Henry_Purcell_1.png" alt="Portrait of Henry Purcell" class="hero-img">
+    <div class="hero-overlay">
+      <h1>Henry Purcell</h1>
+      <p>Discover the life and legacy of England's first opera composer</p>
+      <a href="#main-content" class="hero-button">Explore</a>
+    </div>
+  </header>
+  
+  <main id="main-content">
+    <section class="teaser-grid">
+      <div class="teaser-box">
+        <h3>🎼 His Life</h3>
+        <p>From choir boy to royal composer – a musical journey.</p>
+        <a href="life.html">Read more →</a>
+      </div>
+      <div class="teaser-box">
+        <h3>🎵 His Works</h3>
+        <p>Anthems, operas, odes and instrumental music.</p>
+        <a href="work.html">Explore works →</a>
+      </div>
+      <div class="teaser-box">
+        <h3>📚 His Legacy</h3>
+        <p>Purcell’s influence on music – then and now.</p>
+        <a href="legacy.html">Legacy page →</a>
+      </div>
+    </section>
+  </main>
+  
