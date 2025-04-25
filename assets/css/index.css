@@ -1,0 +1,154 @@
+/* === Global Styles === */
+  /* Reset some default styles */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Smooth scrolling for the whole page */
+html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    font-family: Garamond, serif;
+    background-color: #fff;
+    color: #000;
+  }
+
+  /* === Hero Section === */
+/* Fix for the hero image to extend beneath */
+.hero-image {
+position: fixed; /* Bleibt am Bildschirm fixiert */
+top: 0;
+left: 0;
+width: 100%;
+height: 100vh;
+background-image: url('../images/Henry_Purcell.png');
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+z-index: -1; /* Platziert es hinter allem Inhalt */
+}
+
+.hero-overlay {
+position: relative; /* Änderung von absolute zu relative */
+top: 50vh;
+transform: translateY(-50%);
+text-align: center;
+background: rgba(0, 0, 0, 0.4);
+padding: 30px;
+border-radius: 8px;
+max-width: 90%;
+margin: 0 auto; /* Zentriert horizontal */
+color: white;
+}
+  .hero-overlay h1 {
+    font-size: 2.8em;
+    margin-bottom: 0.3em;
+  }
+
+  .hero-overlay h2 {
+    font-size: 1.6em;
+    font-weight: normal;
+    margin-bottom: 0.3em;
+  }
+
+  .hero-overlay p {
+    font-size: 1.2em;
+    margin-bottom: 1.2em;
+  }
+
+  .hero-button {
+    padding: 10px 20px;
+    background-color: darkslateblue;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+  }
+
+  .hero-button:hover {
+    background-color: slateblue;
+  }
+
+  /* === Teaser Section === */
+/* this shall adjust the teaser wrapper */
+  .teaser-wrapper {
+    position: relative;
+    margin-top: 100vh; /* Push it below the hero section */
+    background-color: rgba(255, 255, 255, 0.3); /* More transparent */
+   backdrop-filter: blur(3px);
+  padding: 40px 20px;
+  z-index: 1; /* Über dem Hintergrundbild */
+}
+
+  .teaser-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .teaser-box {
+    /* Make teaser boxes more transparent */
+
+    flex: 1 1 250px;
+    max-width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    border-radius: 6px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(4px);
+  }
+
+  .teaser-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .teaser-box h3 {
+    margin-top: 0;
+    font-size: 1.3em;
+    color: darkslateblue;
+  }
+
+  .teaser-box p {
+    margin: 10px 0 15px;
+    font-size: 1em;
+  }
+
+  .teaser-box a {
+    color: darkblue;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .teaser-box a:hover {
+    text-decoration: underline;
+    color: steelblue;
+  }
+
+  /* === Responsive === */
+  @media (max-width: 768px) {
+    .hero-overlay h1 {
+      font-size: 2.2em;
+    }
+
+    .hero-overlay h2 {
+      font-size: 1.2em;
+    }
+
+    .teaser-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  }

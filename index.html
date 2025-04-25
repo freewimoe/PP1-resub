@@ -2,157 +2,23 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Henry Purcell</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: Garamond, serif;
-      background-color: #fff;
-      color: #000;
-    }
-
-    /* === Hero Section === */
-    .hero-image {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      background: url('assets/images/Henry_Purcell.png') no-repeat center center/cover;
-      background-attachment: fixed;
-      overflow: hidden;
-    }
-
-    .hero-overlay {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      background: rgba(0, 0, 0, 0.4);
-      padding: 30px;
-      border-radius: 8px;
-      max-width: 90%;
-      color: white;
-    }
-
-    .hero-overlay h1 {
-      font-size: 2.8em;
-      margin-bottom: 0.3em;
-    }
-
-    .hero-overlay h2 {
-      font-size: 1.6em;
-      font-weight: normal;
-      margin-bottom: 0.3em;
-    }
-
-    .hero-overlay p {
-      font-size: 1.2em;
-      margin-bottom: 1.2em;
-    }
-
-    .hero-button {
-      padding: 10px 20px;
-      background-color: darkslateblue;
-      color: white;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 1em;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-      display: inline-block;
-    }
-
-    .hero-button:hover {
-      background-color: slateblue;
-    }
-
-    /* === Teaser Section === */
-    .teaser-wrapper {
-      padding: 60px 20px;
-      background-color: #fafafa;
-    }
-
-    .teaser-grid {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 30px;
-    }
-
-    .teaser-box {
-      flex: 1 1 250px;
-      max-width: 300px;
-      padding: 20px;
-      border: 1px solid #ccc;
-      background-color: #f9f9f9;
-      box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05);
-      text-align: center;
-      border-radius: 6px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .teaser-box:hover {
-      transform: translateY(-5px);
-      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .teaser-box h3 {
-      margin-top: 0;
-      font-size: 1.3em;
-      color: darkslateblue;
-    }
-
-    .teaser-box p {
-      margin: 10px 0 15px;
-      font-size: 1em;
-    }
-
-    .teaser-box a {
-      color: darkblue;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .teaser-box a:hover {
-      text-decoration: underline;
-      color: steelblue;
-    }
-
-    @media (max-width: 768px) {
-      .hero-overlay h1 {
-        font-size: 2.2em;
-      }
-
-      .hero-overlay h2 {
-        font-size: 1.2em;
-      }
-
-      .teaser-grid {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/index.css" />
 </head>
 
 <body>
-<header class="hero-image">
-    <img src="https://assets.codepen.io/11590227/Henry_Purcell_1.png" alt="Portrait of Henry Purcell" class="hero-img">
+  <header class="hero-image">
     <div class="hero-overlay">
       <h1>Henry Purcell</h1>
-      <p>Discover the life and legacy of England's first opera composer</p>
-      <a href="#main-content" class="hero-button">Explore</a>
+      <h2>England's first opera composer</h2>
+      <p>Discover his life and legacy</p>
+      <a href="#teasers" class="hero-button">Explore</a>
     </div>
   </header>
-  
-  <main id="main-content">
+
+  <main id="teasers" class="teaser-wrapper">
     <section class="teaser-grid">
       <div class="teaser-box">
         <h3>🎼 His Life</h3>
@@ -171,4 +37,6 @@
       </div>
     </section>
   </main>
-  
+</body>
+
+</html>
