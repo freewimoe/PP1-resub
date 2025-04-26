@@ -270,8 +270,9 @@ a:hover {
   height: 100%;
 }
 /* === Smart Footer: Purcell Society Karlsruhe === */
-/* This is the CSS for the smart footer, which is a collapsible info panel at the bottom of the page. */
-/* Fix this guy at the bottom, always visible */
+/* === Smart Footer: Purcell Society Karlsruhe === */
+
+/* Fix the footer bar at the bottom of the screen */
 .smart-footer {
   position: fixed;
   bottom: 0;
@@ -281,12 +282,12 @@ a:hover {
   z-index: 1000;
 }
 
-/* Secret checkbox to toggle the panel open/close */
+/* Hidden checkbox to toggle panel open/close */
 .footer-toggle {
   display: none;
 }
 
-/* --- Toggle Bar (click to open/close) --- */
+/* --- Footer toggle bar --- */
 .footer-bar {
   background-color: #111;
   color: #fff;
@@ -301,19 +302,17 @@ a:hover {
   gap: 10px;
 }
 
-/* Little arrow having a dance when we open */
+/* Arrow animation when open */
 .footer-bar .arrow {
   display: inline-block;
   transition: transform 0.3s ease;
 }
 
-/* When checkbox is checked - rotate arrow */
 .footer-toggle:checked + .footer-bar .arrow {
   transform: rotate(180deg);
 }
 
 /* --- Collapsible Info Panel --- */
-/* Hidden by default, only opens when triggered */
 .footer-panel {
   max-height: 0;
   overflow: hidden;
@@ -322,33 +321,39 @@ a:hover {
   transition: max-height 0.5s ease;
 }
 
-/* When open - show content */
+/* When checkbox is checked, reveal panel */
 .footer-toggle:checked ~ .footer-panel {
-  max-height: 600px; /* Giving it more room, just in case */
+  max-height: 800px;
 }
 
-/* --- Layout for the Content Boxes --- */
+/* --- Footer Content Layout --- */
 .footer-columns {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start; /* important: don't stretch vertically */
   gap: 20px;
   padding: 20px;
   border-top: 1px solid #ccc;
+  box-sizing: border-box;
 }
 
-/* --- Individual info boxes --- */
+/* Each content box in the footer */
 .footer-box {
-  flex: 1 1 250px;
-  margin: 10px;
-  padding: 15px;
+  flex: 0 1 auto; /* important: no equal height forcing */
+  width: 90%;
+  max-width: 300px;
+  padding: 12px;
+  margin: 5px auto;
   background-color: #f0f0f0;
   border: 1px solid #ccc;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.05);
   text-align: center;
+  box-sizing: border-box;
+  font-size: 0.9rem;
 }
 
-/* Titles inside footer boxes */
+/* Headings inside footer boxes */
 .footer-box h4 {
   margin-top: 0;
   margin-bottom: 10px;
@@ -356,44 +361,28 @@ a:hover {
   font-size: 1.1rem;
 }
 
-/* Links in the footer */
+/* Links inside footer boxes */
 .footer-box a {
   color: darkblue;
   text-decoration: none;
-  word-break: break-word; /* Break long emails if needed */
+  word-break: break-word;
 }
 
-/* Make link underline on hover */
 .footer-box a:hover {
   text-decoration: underline;
 }
 
-/* --- RESPONSIVE TIME --- */
-
-/* Tablets - we slightly compress the layout */
+/* --- Responsive Adjustments --- */
 @media (max-width: 992px) {
   .footer-columns {
-    padding: 10px 15px; /* smaller padding */
-    gap: 15px; /* slightly closer boxes */
+    padding: 10px;
+    gap: 15px;
   }
-
   .footer-box {
-    padding: 12px;
-    max-width: 400px; /* prevent stretching */
-    font-size: 0.95rem; /* text slightly smaller */
-  }
-
-  .footer-panel {
-    padding: 10px;
-  }
-
-  .footer-bar {
-    padding: 10px;
-    font-size: 0.95em;
+    font-size: 0.9rem;
   }
 }
 
-/* Small tablets and big phones */
 @media (max-width: 768px) {
   .footer-columns {
     flex-direction: column;
@@ -401,27 +390,21 @@ a:hover {
     padding: 10px;
     gap: 10px;
   }
-
   .footer-box {
-    width: 90%;
+    width: 95%;
     padding: 10px;
-    margin: 5px auto;
-    box-sizing: border-box;
-    font-size: 0.9rem;
   }
 }
 
-/* Smartphones - ultimate compression */
 @media (max-width: 600px) {
   .footer-columns {
     padding: 5px;
     gap: 8px;
   }
-
   .footer-box {
-    width: 95%;
+    font-size: 0.85rem;
     padding: 8px;
-    font-size: 0.9rem;
   }
 }
+
 /* --- End of Smart Footer --- */
