@@ -270,8 +270,7 @@ a:hover {
   height: 100%;
 }
 /* === Smart Footer: Purcell Society Karlsruhe === */
-/* === Smart Footer: Purcell Society Karlsruhe === */
-
+/* should be final...*/
 /* Fix the footer bar at the bottom of the screen */
 .smart-footer {
   position: fixed;
@@ -295,7 +294,6 @@ a:hover {
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -323,7 +321,7 @@ a:hover {
 
 /* When checkbox is checked, reveal panel */
 .footer-toggle:checked ~ .footer-panel {
-  max-height: 800px;
+  max-height: 600px;
 }
 
 /* --- Footer Content Layout --- */
