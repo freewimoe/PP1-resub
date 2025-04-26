@@ -316,7 +316,7 @@ a:hover {
   overflow: hidden;
   background-color: #f0f0f0;
   color: #000;
-  transition: max-height 0.5s ease;
+  transition: all 0.5s ease-in-out; /* smooth transition */
 }
 
 /* When checkbox is checked, reveal panel */

@@ -14,6 +14,42 @@ The site is fully responsive and adjusts to various screen sizes.
 - **Responsive Design**: Optimized for desktop, tablet, and mobile screens.
 - **External Links**: Open in a new tab (`target="_blank"` with `rel="noopener noreferrer"`) for improved user experience and security.
 
+## Screenshots
+
+Below are some impressions of the website on different devices:
+
+### Homepage - Start (Desktop)
+![Homepage Desktop](assets/images/screenshots/index-desktop.png)
+
+### Homepage - Explore Button (Desktop)
+![Homepage Desktop](assets/images/screenshots/index-desktop-explore.png)
+
+### Life Page (Desktop)
+![Life Page Desktop](assets/images/screenshots/life-desktop.png)
+
+### Works Page (Desktop)
+![Works Page Desktop](assets/images/screenshots/works-desktop.png)
+
+### Legacy Page (Desktop)
+![Legacy Page Desktop](assets/images/screenshots/legacy-desktop.png)
+
+### Links Page (Desktop)
+![Links Page Desktop](assets/images/screenshots/links-desktop.png)
+
+---
+
+### Smart Footer (Expanded) on links page
+![Footer Expanded](assets/images/screenshots/footer-expanded.png)
+
+---
+
+### Responsive Design (life.html) - Tablet View
+![Tablet View (Surface Pro 7)](assets/images/screenshots/tablet-view.png)
+
+### Responsive Design (life.html)- Smartphone View
+![Smartphone View (Samsung S20)](assets/images/screenshots/mobile-view.png)
+
+
 ## Technologies Used
 
 - HTML5
