@@ -64,9 +64,19 @@ Below are some impressions of the website on different devices:
 
 ## Deployment
 
-- The project is deployed via GitHub Pages.
-The live website can be viewed [here](https://freewimoe.github.io/PP1-resub/).
+This website was deployed using **GitHub Pages**:
 
+- The project repository is hosted on [GitHub](https://github.com/freewimoe/PP1-resub).
+- The live site is available at: [https://freewimoe.github.io/PP1-resub/](https://freewimoe.github.io/PP1-resub/)
+
+### Steps for Deployment:
+1. Go to the repository on GitHub.
+2. Click on **Settings** → **Pages**.
+3. Under **Source**, select the **main** branch and **/ (root)** folder.
+4. Click **Save**.
+5. After a few seconds, the site is published and available at the provided URL.
+
+---
 
 ## Acknowledgments
 
