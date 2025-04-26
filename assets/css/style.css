@@ -270,23 +270,23 @@ a:hover {
   height: 100%;
 }
 /* === Smart Footer: Purcell Society Karlsruhe === */
-
-/* Fixed container at bottom */
+/* === Footer Experimentation === */
+/* Okay, trying a fixed footer at the bottom. Let’s see if it stays put on all screens. */
 .smart-footer {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   font-family: Garamond, serif;
-  z-index: 1000;
+  z-index: 1000; /* make sure it stays on top */
 }
 
-/* Hidden checkbox toggle (acts as switch) */
+/* This checkbox acts like a hidden switch for the footer toggle */
 .footer-toggle {
   display: none;
 }
 
-/* --- Toggle Bar --- */
+/* --- Toggle bar (the clickable part that opens/closes the footer) --- */
 .footer-bar {
   background-color: #111;
   color: #fff;
@@ -301,18 +301,19 @@ a:hover {
   gap: 10px;
 }
 
-/* Arrow styling inside toggle bar */
+/* Animate the arrow when clicked */
 .footer-bar .arrow {
   display: inline-block;
   transition: transform 0.3s ease;
 }
 
-/* Flip arrow on toggle */
+/* Rotate the arrow when the toggle is active */
 .footer-toggle:checked + .footer-bar .arrow {
   transform: rotate(180deg);
 }
 
-/* --- Info Panel (collapsible) --- */
+/* --- Collapsible Panel --- */
+/* starts hidden (max-height: 0) */
 .footer-panel {
   max-height: 0;
   overflow: hidden;
@@ -321,12 +322,12 @@ a:hover {
   transition: max-height 0.5s ease;
 }
 
-/* Open panel when toggle is checked */
+/* when toggle is checked, panel expands */
 .footer-toggle:checked ~ .footer-panel {
-  max-height: 400px; /* Adjust if needed */
+  max-height: 500px; /* raised a bit so it fits all content comfortably */
 }
 
-/* --- Content Layout --- */
+/* --- Layout inside the panel --- */
 .footer-columns {
   display: flex;
   justify-content: space-around;
@@ -335,7 +336,7 @@ a:hover {
   border-top: 1px solid #ccc;
 }
 
-/* Individual info boxes */
+/* each column box (about / services / contact) */
 .footer-box {
   flex: 1 1 200px;
   margin: 10px;
@@ -345,12 +346,13 @@ a:hover {
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.05);
 }
 
-/* Headings and links */
+/* titles in each box */
 .footer-box h4 {
   margin-top: 0;
   color: darkslateblue;
 }
 
+/* email links etc. */
 .footer-box a {
   color: darkblue;
   text-decoration: none;
@@ -359,3 +361,51 @@ a:hover {
 .footer-box a:hover {
   text-decoration: underline;
 }
+
+/* === Tablet view – let’s make things breathe better on narrower screens === */
+@media (max-width: 992px) {
+  .footer-columns {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .footer-box {
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+  }
+
+  .footer-panel {
+    padding: 10px 0;
+  }
+
+  .footer-bar {
+    padding: 10px;
+    font-size: 0.95em;
+  }
+}
+
+/* === Smartphone view – this got tricky === */
+/* We had too much bottom padding – reduce to make things tighter */
+@media (max-width: 768px) {
+  .footer-panel {
+    padding: 10px 10px 0 10px; /* bottom padding = 0 */
+  }
+
+  .footer-columns {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .footer-box {
+    width: 90%;
+    padding: 10px 15px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+}
+/* === End of Footer Experimentation === */
+/* === End of Smart Footer: Purcell Society Karlsruhe === */

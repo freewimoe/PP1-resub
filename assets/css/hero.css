@@ -152,3 +152,28 @@ color: white;
       align-items: center;
     }
   }
+
+  @media (max-width: 992px) {
+    .footer-columns {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px; /* reduziert den Abstand */
+      padding: 10px;
+    }
+  
+    .footer-box {
+      width: 90%;
+      max-width: 500px;
+      text-align: center;
+    }
+  
+    .footer-panel {
+      padding: 10px 0;
+    }
+  
+    .footer-bar {
+      padding: 10px;
+      font-size: 0.95em;
+    }
+  }
+  
