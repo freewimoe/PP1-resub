@@ -1,71 +1,39 @@
-# His Life and Works – Henry Purcell
+# Purcell Society Karlsruhe - Portfolio Project 1
 
 ## Project Overview
-This website is a tribute to the life, works, and legacy of the English composer **Henry Purcell**, tailored especially for younger audiences.  
-It provides an accessible introduction to his biography, compositions, and historical significance.
 
----
+This website is dedicated to Henry Purcell and the Purcell Society Karlsruhe.  
+It contains a home page with an immersive hero section, teaser boxes leading to more detailed pages, and a smart collapsible footer for information and contact.  
+The site is fully responsive and adjusts to various screen sizes.
 
 ## Features
 
-- **Responsive Design** – Works on desktop, tablet, and mobile devices
-- **Sticky Navigation Menu** – Easy navigation between pages
-- **Interactive Smart Footer** – Expandable Info & Contact section
-- **Clean and Accessible Layout** – Simple typography and structured content
-- **External Links** – Direct access to more detailed resources
-
----
-
-## Pages
-
-| Page | Content |
-|:-----|:--------|
-| `index.html` | Overview of Henry Purcell’s life |
-| `life.html` | Detailed biography |
-| `work.html` | Overview of compositions |
-| `legacy.html` | Purcell's influence and legacy |
-| `links.html` | Useful external resources |
-
----
+- **Hero Section**: Full-screen background image with overlayed text and an explore button.
+- **Teaser Section**: Animated boxes linking to key parts of the website.
+- **Smart Footer**: Fixed collapsible footer for about, services, and contact information.
+- **Responsive Design**: Optimized for desktop, tablet, and mobile screens.
+- **External Links**: Open in a new tab (`target="_blank"` with `rel="noopener noreferrer"`) for improved user experience and security.
 
 ## Technologies Used
 
 - HTML5
-- CSS3
-- Media Queries for Responsive Design
-- Embedded SVG (for the Footer toggle arrow)
+- CSS3 (with custom responsive adjustments)
+- Visual Studio Code
+- Git & GitHub for version control
 
----
+## Special Notes
 
-## Testing
-
-- HTML and CSS validated with [W3C Validator](https://validator.w3.org/) and [CSS Validator](https://jigsaw.w3.org/css-validator/)
-- Responsiveness manually tested on:
-  - Desktop (Full HD)
-  - iPad (Pro, Air, Mini)
-  - Galaxy Tab
-  - iPhone (SE, 12 Pro)
-  - Samsung Galaxy S20 Ultra
-- Toggle menu and Smart Footer work flawlessly on all devices
-
----
+- The **Wikipedia link** for Purcell's compositions opens in a **new tab** to prevent disrupting the user session and for security purposes.
+- Personal, slightly experimental CSS comments have been used to make the development process authentic and traceable.
 
 ## Deployment
 
-The project is deployed using [GitHub Pages](https://pages.github.com/) (or your platform, replace this!).  
-To view the live site: [**Live Site Link**](#) (replace with actual link)
-
----
-
-## Credits
-
-- Research on Henry Purcell: [Wikipedia](https://en.wikipedia.org/wiki/Henry_Purcell)
-- Inspiration for Smart Footer mechanism: Custom-developed based on Flexbox and media queries.
-
----
+- The project is deployed via GitHub Pages.
 
 ## Acknowledgments
 
-Thanks to the Code Institute and my reviewers for valuable guidance throughout the project!
+Thanks to Code Institute and the open source community for providing the learning resources that made this project possible.
 
 ---
+
+*(c) 2025 Purcell Society Karlsruhe*
