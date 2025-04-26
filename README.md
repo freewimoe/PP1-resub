@@ -65,6 +65,8 @@ Below are some impressions of the website on different devices:
 ## Deployment
 
 - The project is deployed via GitHub Pages.
+The live website can be viewed [here](https://freewimoe.github.io/PP1-resub/).
+
 
 ## Acknowledgments
 
