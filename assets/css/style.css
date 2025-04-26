@@ -270,10 +270,8 @@ a:hover {
   height: 100%;
 }
 /* === Smart Footer: Purcell Society Karlsruhe === */
-/* === Footer Experimentation === */
-
-/* === Smart Footer | personal experiment === */
-/* fixed footer at the bottom like an app bar */
+/* This is the CSS for the smart footer, which is a collapsible info panel at the bottom of the page. */
+/* Fix this guy at the bottom, always visible */
 .smart-footer {
   position: fixed;
   bottom: 0;
@@ -283,132 +281,147 @@ a:hover {
   z-index: 1000;
 }
 
-/* hide native checkbox */
+/* Secret checkbox to toggle the panel open/close */
 .footer-toggle {
   display: none;
 }
 
-/* toggle bar look */
+/* --- Toggle Bar (click to open/close) --- */
 .footer-bar {
   background-color: #111;
   color: #fff;
   text-align: center;
   padding: 10px 20px;
-  font-size: 1em; /* might grow on bigger screens */
+  font-size: 16px;
+  cursor: pointer;
+
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  cursor: pointer;
 }
 
-/* arrow rotation on toggle */
+/* Little arrow having a dance when we open */
 .footer-bar .arrow {
+  display: inline-block;
   transition: transform 0.3s ease;
 }
+
+/* When checkbox is checked - rotate arrow */
 .footer-toggle:checked + .footer-bar .arrow {
   transform: rotate(180deg);
 }
 
-/* collapsible content area */
+/* --- Collapsible Info Panel --- */
+/* Hidden by default, only opens when triggered */
 .footer-panel {
   max-height: 0;
   overflow: hidden;
   background-color: #f0f0f0;
   color: #000;
   transition: max-height 0.5s ease;
-  padding: 0; /* default: none, add per media rule */
 }
 
-/* panel expands when checked */
+/* When open - show content */
 .footer-toggle:checked ~ .footer-panel {
-  max-height: 600px;
+  max-height: 600px; /* Giving it more room, just in case */
 }
 
-/* grid layout for info boxes */
+/* --- Layout for the Content Boxes --- */
 .footer-columns {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
-  padding: 20px;
   gap: 20px;
+  padding: 20px;
   border-top: 1px solid #ccc;
 }
 
-/* individual box look */
+/* --- Individual info boxes --- */
 .footer-box {
-  flex: 1 1 200px;
-  max-width: 300px;
-  padding: 20px;
+  flex: 1 1 250px;
   margin: 10px;
+  padding: 15px;
   background-color: #f0f0f0;
   border: 1px solid #ccc;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.05);
   text-align: center;
-  font-size: 1em;
 }
 
+/* Titles inside footer boxes */
 .footer-box h4 {
   margin-top: 0;
+  margin-bottom: 10px;
   color: darkslateblue;
+  font-size: 1.1rem;
 }
+
+/* Links in the footer */
 .footer-box a {
   color: darkblue;
   text-decoration: none;
+  word-break: break-word; /* Break long emails if needed */
 }
+
+/* Make link underline on hover */
 .footer-box a:hover {
   text-decoration: underline;
 }
 
-/* ===== Tablet Fixes (my preferred look) ===== */
+/* --- RESPONSIVE TIME --- */
+
+/* Tablets - we slightly compress the layout */
 @media (max-width: 992px) {
+  .footer-columns {
+    padding: 10px 15px; /* smaller padding */
+    gap: 15px; /* slightly closer boxes */
+  }
+
+  .footer-box {
+    padding: 12px;
+    max-width: 400px; /* prevent stretching */
+    font-size: 0.95rem; /* text slightly smaller */
+  }
+
+  .footer-panel {
+    padding: 10px;
+  }
+
+  .footer-bar {
+    padding: 10px;
+    font-size: 0.95em;
+  }
+}
+
+/* Small tablets and big phones */
+@media (max-width: 768px) {
   .footer-columns {
     flex-direction: column;
     align-items: center;
-    padding: 10px 15px;
+    padding: 10px;
     gap: 10px;
   }
 
   .footer-box {
-    width: 95%;
-    max-width: 600px;
-    font-size: 1.05em; /* improved readability */
-    padding: 15px 20px;
-  }
-
-  .footer-panel {
-    padding: 15px 10px;
-  }
-
-  .footer-bar {
-    padding: 8px 12px;
-    font-size: 1em;
+    width: 90%;
+    padding: 10px;
+    margin: 5px auto;
+    box-sizing: border-box;
+    font-size: 0.9rem;
   }
 }
 
-/* ===== Smartphone Fixes – reduce whitespace! ===== */
+/* Smartphones - ultimate compression */
 @media (max-width: 600px) {
   .footer-columns {
-    padding: 8px;
+    padding: 5px;
     gap: 8px;
   }
 
   .footer-box {
     width: 95%;
-    font-size: 0.95em;
-    padding: 10px;
-    margin: 5px auto;
-  }
-
-  .footer-panel {
-    padding-bottom: 5px; /* ✂️ reduce bottom space */
-  }
-
-  .footer-bar {
-    padding: 6px 10px;
-    font-size: 0.95em;
+    padding: 8px;
+    font-size: 0.9rem;
   }
 }
-
-/* === End of Footer Experimentation === */
-/* === End of Smart Footer: Purcell Society Karlsruhe === */
+/* --- End of Smart Footer --- */
